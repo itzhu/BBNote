@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.anko:anko-common:0.10.3'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    /*js-native通信  jsbridge - https://github.com/lzyzsd/JsBridge*/
+    compile 'com.github.lzyzsd:jsbridge:1.0.4'
+    /*webview--agentweb - https://github.com/Justson/AgentWeb*/
+    compile 'com.just.agentweb:agentweb:3.0.0-rc'
+    /*androidUtil-AndroidUtilCode - https://github.com/Blankj/AndroidUtilCode/blob/master/README-CN.md*/
+    compile 'com.blankj:utilcode:1.9.12'
+    //GSON
+    compile 'com.google.code.gson:gson:2.8.0'
+    /*rx系列*/
+    compile 'io.reactivex.rxjava2:rxjava:2.1.8'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    /*nohttp http请求-不需要使用okhttp*/
+    compile 'com.yanzhenjie.nohttp:nohttp:1.1.8'
+    /*权限请求*/
+    compile 'com.yanzhenjie:permission:1.1.2'
+
+    implementation project(':lib-me-view')
+    implementation project(':lib-t-ahbottomnavigation')
+}
+

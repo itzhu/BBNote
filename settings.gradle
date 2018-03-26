@@ -1,0 +1,1 @@
+include ':app-shici', ':lib-common', ':lib-t-ahbottomnavigation', ':lib-me-view'

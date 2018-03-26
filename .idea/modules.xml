@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BBNote.iml" filepath="$PROJECT_DIR$/BBNote.iml" />
+      <module fileurl="file://H:\itzhu\BBNote\app-shici\app.iml" filepath="H:\itzhu\BBNote\app-shici\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-shici/app-shici.iml" filepath="$PROJECT_DIR$/app-shici/app-shici.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-common/lib-common.iml" filepath="$PROJECT_DIR$/lib-common/lib-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-me-view/lib-me-view.iml" filepath="$PROJECT_DIR$/lib-me-view/lib-me-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-t-ahbottomnavigation/lib-t-ahbottomnavigation.iml" filepath="$PROJECT_DIR$/lib-t-ahbottomnavigation/lib-t-ahbottomnavigation.iml" />
+    </modules>
+  </component>
+</project>

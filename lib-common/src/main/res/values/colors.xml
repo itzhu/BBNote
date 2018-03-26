@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_toolbar_default">#ED4A4B</color>
+    <color name="color_statusbar_default">#000000</color>
+    <color name="color_main_tabselect">#d94600</color>
+
+    <color name="textcolor_tab_select">#1a191e</color>
+    <color name="textcolor_tab_unselect">#939393</color>
+
+    <color name="textcolor_tab_red_select">#fc4a4e</color>
+    <color name="textcolor_tab_red_unselect">#939393</color>
+    <color name="textcolor_title">#131314</color>
+    <color name="textcolor_normal2">#535353</color>
+    <color name="textcolor_url_blue">#0069BD</color>
+    <color name="bg_ac_normal">#F7F7F7</color>
+
+    <color name="line_normal">#f2f2f2</color>
+
+    <string name="can_not_find_version_name">0.0.0</string>
+</resources>
