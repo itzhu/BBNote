@@ -4,6 +4,7 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import com.blankj.utilcode.util.FileUtils
 import com.blankj.utilcode.util.ToastUtils
+import kotlinx.android.synthetic.main.activity_login.*
 import me.itzhu.common.interfaces.OnEventListener
 
 import me.itzhu.common.ui.activity.CommonUIActivity
@@ -52,6 +53,7 @@ class MainActivity : CommonUIActivity() {
     }
 
     fun test() {
+        tv_content.setText(ShiciHelper.getPoemDataFromId(1)?.toString())
         L.e(TAG, "data->" + ShiciHelper.getPoemDataFromId(1)?.toString())
     }
 
