@@ -4,6 +4,8 @@ import android.database.sqlite.SQLiteDatabase
 import com.j256.ormlite.android.AndroidConnectionSource
 import com.j256.ormlite.dao.Dao
 import com.j256.ormlite.dao.DaoManager
+import me.itzhu.common.util.L
+import pub.study.shici.AppConfig
 
 /**
  * Created by itzhu on 2018/3/26.
@@ -11,15 +13,18 @@ import com.j256.ormlite.dao.DaoManager
  */
 class DBManager {
 
+    val TAG = javaClass.simpleName
+
     private var mConnectionSource: AndroidConnectionSource? = null
 
     companion object {
         @Volatile private var INSTANCE: DBManager? = null
 
-        val dbPath = "file:///android_asset/shici.db"//数据库路径
+        private val dbPath = AppConfig.getShiciDBFile()//数据库路径
 
         /**
          * 初始化数据库
+         * @param dbPath db文件路径
          * */
         private fun initializeInstance(dbPath: String): DBManager {
             if (INSTANCE == null) {
@@ -44,8 +49,14 @@ class DBManager {
             }
         } catch (e: Exception) {
             e.printStackTrace()
+            L.e(TAG, "error->", e)
         }
         return null
     }
 
+    fun close() {
+        mConnectionSource?.isCancelQueriesEnabled = true
+        mConnectionSource?.close()
+        INSTANCE = null
+    }
 }

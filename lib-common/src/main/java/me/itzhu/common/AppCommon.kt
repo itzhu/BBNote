@@ -54,7 +54,7 @@ object AppCommon {
         return deviceID
     }
 
-    fun initHttp(context: Application) {
+    private fun initHttp(context: Application) {
         val config = InitializationConfig.newBuilder(context)
                 .connectionTimeout(10 * 1000)
                 .readTimeout(10 * 1000)
